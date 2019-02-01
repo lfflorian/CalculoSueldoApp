@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>{{ titulo }}</h2>
+    <div class="formulario">
+        <form>
+            <div class="form-group">
+                <label for="fecha">Fecha de pago:</label>
+                <input type="date" ng-model="Pago.FechaPago"  class="form-control" id="fecha" placeholder="Fecha" name="fecha">
+                <input type="hidden" ng-model="Negocio" ng-model="Pago.Negocio = Negocio">
+                <input type="hidden"  ng-model="Pago.Negocio = Negocio">
+              </div>
+              <div class="form-group">
+                <label for="pago">Pago realizado:</label>
+                <input type="text" ng-model="Pago.Pago" class="form-control" id="pago" placeholder="Precio contado" name="pago">
+                <input type="hidden" ng-model="Enganche" ng-model="Pago.Enganche = Enganche">
+                <input type="hidden"  ng-model="Pago.Enganche = Enganche">
+              </div>
+        </form>
+    </div>
+    <button type="button" ng-show="mostrarbtnNO" ng-click="Guardar()" class="btn btn-success">Guardar</button>
+    <button type="button" ng-show="mostrarbtn" ng-click="Eliminar()"  class="btn btn-success">Eliminar</button>
+    <button type="button" ng-click="Salir()" class="btn btn-success float-right">Salir</button>
+</div>

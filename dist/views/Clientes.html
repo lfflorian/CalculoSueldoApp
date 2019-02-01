@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Listado de Clientes</h2>
+    <a ng-href="#!EdicionCliente"  class="btn btn-success">Agregar nuevo cliente</a>
+    <div class="table-responsive" style="overflow-x:auto !important;">
+        <table class="table table-striped">
+            <thead class="thead-light">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Editar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cliente in clientes" ng-dblclick="irNegocios(cliente._id)">
+                    <td>{{ cliente.Nombre }}</td>
+                    <td>{{ cliente.Apellido }}</td>
+                    <td>{{ cliente.Telefono[0] }}</td>
+                    <td ng-click="Editar(cliente._id)" class="editar">Editar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

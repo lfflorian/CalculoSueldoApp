@@ -1,0 +1,41 @@
+<div class="container">
+        <div class="card">
+            <div class="card-header">Datos del Negocio</div>
+            <div class="card-body bg-light text-dark">
+                <p><strong>Producto </strong>{{ Negocio.NombreProducto }}</p>
+                <p><strong>Descripcion </strong>{{ Negocio.Descripcion }}</p>
+                <p><strong>Fecha de Registro </strong>{{ Negocio.FechaRegistro | date :  "dd/MM/y" }}</p>
+                <p><strong>Precio contado </strong>{{ Negocio.PrecioContado }}</p>
+                <p><strong>Porcentaje Interes </strong>{{ Negocio.PorcentajeInteres }}</p>
+            </div>
+        </div>
+        <h2>Listado de Pagos</h2>
+        <a ng-href="#!EdicionPago/CLI{{ Negocio._id }}" ng-show="btnNuevo" class="btn btn-success">Agregar nuevo pago</a>
+        <a ng-href="#!EdicionPago/CLIX{{ Negocio._id }}" ng-show="btnEnganche" class="btn btn-success">Agregar Enganche</a>
+        <div class="table-responsive" style="overflow-x:auto !important;">
+            <table class="table table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Días</th>
+                        <th>Pago</th>
+                        <th>Interés</th>
+                        <th>Amortización</th>
+                        <th>Saldo</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pago in pagos">
+                        <td>{{ pago.FechaPago | date :  "dd/MM/y" }}</td>
+                        <td>{{ pago.Dias }}</td>
+                        <td>{{ pago.Pago }}</td>
+                        <td>{{ pago.Interes }}</td>
+                        <td>{{ pago.Amortizacion }}</td>
+                        <td>{{ pago.Saldo }}</td>
+                        <td ng-click="Editar(pago._id)" class="editar">Editar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

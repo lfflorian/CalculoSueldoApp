@@ -1,0 +1,34 @@
+<div class="container">
+        <div class="card">
+            <div class="card-header">Datos del cliente</div>
+            <div class="card-body bg-light text-dark">
+                <p><strong>Nombre </strong>{{ Cliente.Nombre }}</p>
+                <p><strong>Apellido </strong>{{ Cliente.Apellido }}</p>
+                <p><strong>Telefono </strong>{{ Cliente.Telefono }}</p>
+                <p><strong>Direccion </strong>{{ Cliente.Direccion }}</p>
+                <p><strong>Fecha de Registro </strong>{{ Cliente.FechaRegistro | date :  "dd/MM/y" }}</p>
+            </div>
+        </div>
+        <h2>Listado de Negocios</h2>
+        <a ng-href="#!EdicionNegocio/CLI{{ Cliente._id }}" class="btn btn-success">Agregar nuevo Negocio</a>
+        <div class="table-responsive" style="overflow-x:auto !important;">
+            <table class="table table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio Contado</th>
+                        <th>Porcentaje Interes</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="negocio in negocios" ng-dblclick="irPagos(negocio._id)">
+                        <td>{{ negocio.NombreProducto }}</td>
+                        <td>{{ negocio.PrecioContado }}</td>
+                        <td>{{ negocio.PorcentajeInteres }}</td>
+                        <td ng-click="Editar(negocio._id)" class="editar">Editar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

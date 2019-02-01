@@ -1,0 +1,24 @@
+{
+  "name": "calculo-saldo-api",
+  "version": "0.1.0",
+  "description": "Aplicación para calculo de sueldo de gecios",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lfflorian",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "crypto": "^1.0.1",
+    "express": "^4.16.4",
+    "jwt-simple": "^0.5.5",
+    "moment": "^2.23.0",
+    "mongoose": "^5.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

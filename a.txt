@@ -1,0 +1,3 @@
+https://mongoosejs.com/docs/populate.html
+
+Este es el tema para hacer referencias sobre otros objetos
