@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="negocio in negocios" ng-dblclick="irPagos(negocio._id)">
+                    <tr ng-repeat="negocio in negocios" ios-dblclick="irPagos(negocio._id)" ng-dblclick="irPagos(negocio._id)">
                         <td>{{ negocio.NombreProducto }}</td>
                         <td>{{ negocio.PrecioContado }}</td>
                         <td>{{ negocio.PorcentajeInteres }}</td>
