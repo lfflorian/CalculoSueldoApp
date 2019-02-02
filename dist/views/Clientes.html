@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="cliente in clientes" ng-dblclick="irNegocios(cliente._id)">
+                <tr ng-repeat="cliente in clientes" ios-dblclick="irNegocios(cliente._id)" ng-dblclick="irNegocios(cliente._id)">
                     <td>{{ cliente.Nombre }}</td>
                     <td>{{ cliente.Apellido }}</td>
                     <td>{{ cliente.Telefono[0] }}</td>
